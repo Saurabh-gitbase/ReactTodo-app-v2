@@ -12,7 +12,6 @@ class Todo extends Component{
     }
 
     handleInput = (props) => {
-        console.log("handleInput")
         this.setState({
             currItem:{
                 task:props.target.value,
@@ -42,14 +41,12 @@ class Todo extends Component{
 
     delItem = (id) => {
         const filterItems = this.state.items.filter(item=>item.id!==id);
-        console.log(filterItems)
         this.setState({
             items:filterItems
         })
     }
 
     handleBackground = (id) => {
-        
         let items = [...this.state.items]
         items.forEach(item=> {
             if(item.id === id)
