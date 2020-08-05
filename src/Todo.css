@@ -27,10 +27,17 @@
     margin-bottom: 10px;
     display: flex;
     justify-content: center;
+    background-color: #e7e8eb;
+}
+
+.todo-form > form {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
 }
 
 .todo-form > form > input {
-    width: 500px;
+    width: 50% ;
     height: 40px;
     border-radius: 5px;
     border: 2px solid #3498db;
@@ -51,13 +58,25 @@
 }
 
 .todo-items {
-    width: 60%;
+    width: 65%;
     height: auto;
     margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
+
+@media only screen and (max-width: 700px) {
+    .todo-items {
+        width: 100%;
+      background-color: lightblue;
+    }
+
+    .todo-form > form > input {
+        width: 80%;
+    }
+  }
+
 
 .item {
     position: relative;

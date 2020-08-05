@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import List from './itemlist';
-// import FlipMove from 'react-flip-move';
 
 class Todo extends Component{
     state={
@@ -26,7 +25,6 @@ class Todo extends Component{
 
     handleSubmit= (props) => {
         props.preventDefault();
-        // console.log(this.state.currItem)
         const newItem = this.state.currItem;
         if(newItem.task!==""){
             const updateditems = [...this.state.items,newItem];
@@ -39,7 +37,6 @@ class Todo extends Component{
                 }
             })
         }
-        // console.log(this.state.currItem)
 
     }
 
@@ -59,6 +56,15 @@ class Todo extends Component{
                 item.complete ? item.complete=false : item.complete=true;
         })
         this.setState({items:items})
+    }
+
+    handleCompleted = () =>
+    {
+        const filterItems = this.state.items.filter(item=> item.complete===false);
+        this.setState({
+            items:filterItems
+        })
+
     }
 
     render(){
