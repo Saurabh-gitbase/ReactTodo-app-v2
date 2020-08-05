@@ -58,14 +58,7 @@ class Todo extends Component{
         this.setState({items:items})
     }
 
-    handleCompleted = () =>
-    {
-        const filterItems = this.state.items.filter(item=> item.complete===false);
-        this.setState({
-            items:filterItems
-        })
-
-    }
+    
 
     render(){
         return(
